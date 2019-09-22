@@ -11,7 +11,11 @@ While working on the puzzle game Dollar Shuffle, I had the thought that all prog
 
 Creating the graph was the easy part.  With judicious use of `randi` and `randf` I created a collection of nodes, connected them randomly, and distributed points amongst them.  There was one problem with this:  the graphs were ugly.
 
+![One bad graph](/assets/posts_annealing/bad_graph_1.png)
+
 Horrifically, terribly ugly.  Confusing, too.
+
+![Another bad graph](/assets/posts_annealing/bad_graph_2.png)
 
 This is how I began delving into the world of graph drawing and the aesthetics of it.  What does it mean for a graph to look “good”?  How can one create an algorithm to fulfill that definition?
 
