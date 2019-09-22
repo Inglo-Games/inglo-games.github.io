@@ -1,21 +1,21 @@
 [
 	{
 		"name": "Dollar Shuffle",
-		"image": "placeholder.jpg",
+		"image": "dollar_icon.png",
 		"url": "https://inglo-games.itch.io/dollar-shuffle",
 		"date": "February 2019",
 		"tags": ["Web","Android"]
 	},
 	{
 		"name": "Stoneflower Harvest",
-		"image": "placeholder.jpg",
+		"image": "stoneflower_icon.png",
 		"url": "https://inglo-games.itch.io/stoneflower-harvest",
 		"date": "August 2019",
 		"tags": ["Web","Android","Linux","Windows","OSX"]
 	},
 	{
 		"name": "Asphodel Meadows",
-		"image": "placeholder.jpg",
+		"image": "asphodel_icon.png",
 		"url": "https://merly23.itch.io/asphodel-meadows",
 		"date": "September 2019",
 		"tags": ["Linux","Windows"]
