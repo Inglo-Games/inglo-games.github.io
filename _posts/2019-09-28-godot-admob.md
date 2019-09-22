@@ -2,7 +2,6 @@
 layout: post
 title: Adding AdMob Ads to Godot Games
 date: 2019-09-28 23:59:59
-categories: gamedev
 ---
 
 Deciding how to monetize your games is a tricky subject.  Having advertisements in your game may be a good way to do this -- particularly if the game may not be worth a flat fee to an average player.  Unfortunately, the Godot engine doesnt have a built in mechanism for adding ads to your game.  Fortunately, Godot is an open-source project with an active community that creates modules to fill in missing functions like that!

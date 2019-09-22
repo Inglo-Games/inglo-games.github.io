@@ -2,7 +2,6 @@
 layout: post
 title: Optimization and Simulated Annealing
 date: 2019-09-21 23:59:59
-categories: coding, math
 ---
 
 # Optimization and Simulated Annealing
