@@ -16,19 +16,8 @@
     "icon": "fa-desktop"
   },
   {
-    "text": "Resume",
-    "url": "/#",
-    "icon": "fa-graduation-cap",
-  },
-  {
     "text": "Github",
-    "url": "/#",
+    "url": "https://www.github.com/Inglo-Games",
     "icon": "fa-github"
-  },
-  {
-    "text": "XML Feed",
-    "url": "/feed.xml",
-    "icon": "fa-feed",
-    "target": _blank
   }
 ]
