@@ -16,6 +16,11 @@
     "icon": "fa-desktop"
   },
   {
+    "text": "Collaborations",
+    "url": "/collab",
+    "icon": "fa-desktop"
+  },
+  {
     "text": "Github",
     "url": "https://www.github.com/Inglo-Games",
     "icon": "fa-github"
