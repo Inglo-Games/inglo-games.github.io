@@ -1,17 +1,17 @@
-title: John Smith
-description: My Personal Blog
-author: John Smith
+title: Inglo Games
+description: Homepage
+author: Inglo Games
 logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
-about: Freelance developer
+github: https://github.com/Inglo-Games
+about: Indie Game Studio
 
 baseurl: ""
 url: ""
 
-allowsearch: true
+allowsearch: false
 
-disqus_shortname: aboutashu
-google_analytics: UA-72862926-1
+disqus_shortname: IngloGames
+google_analytics: UA-148359985-1
 
 share:
   twitter_username: \#
