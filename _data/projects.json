@@ -12,5 +12,12 @@
 		"url": "https://inglo-games.itch.io/stoneflower-harvest",
 		"date": "August 2019",
 		"tags": ["Web","Android","Linux","Windows","OSX"]
+	},
+	{
+		"name": "Asphodel Meadows",
+		"image": "asphodel_icon.png",
+		"url": "https://merly23.itch.io/asphodel-meadows",
+		"date": "September 2019",
+		"tags": ["Linux","Windows"]
 	}
 ]
