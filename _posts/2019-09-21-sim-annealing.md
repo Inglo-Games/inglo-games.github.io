@@ -21,7 +21,7 @@ This is how I began delving into the world of graph drawing and the aesthetics o
 
 ## Graph Drawing
 
-The [Wikipedia page for Graph Drawing][https://en.wikipedia.org/wiki/Graph_drawing] lists a few "quality measures" of a graph but only a few of those applied to this situation:
+The [Wikipedia page for Graph Drawing](https://en.wikipedia.org/wiki/Graph_drawing) lists a few "quality measures" of a graph but only a few of those applied to this situation:
 * The __crossing number__, or the number of pairs of edges that cross over one another
 * The __angular resolution__, or the sharpness of the smallest angle between two lines
 * Deviation in edge length
@@ -172,7 +172,7 @@ for index in range(FINE_TUNING_LOOPS):
         cost_current = cost_new
 {% endhighlight %}
 
-I'm certainly not the first one to apply simulated annealing to graph drawing.  In fact, almost all of my code was adapted from a [research paper][https://dl.acm.org/citation.cfm?id=234538] by Davidson and Harel.  It turns out, simulated annealing has been used to make nice looking graphs on computers almost as long as graphs have been displayed on computers.  All that was left for me to do was adapt that code into GDScript, the Godot game engine’s proprietary language.
+I'm certainly not the first one to apply simulated annealing to graph drawing.  In fact, almost all of my code was adapted from a [research paper](https://dl.acm.org/citation.cfm?id=234538) by Davidson and Harel.  It turns out, simulated annealing has been used to make nice looking graphs on computers almost as long as graphs have been displayed on computers.  All that was left for me to do was adapt that code into GDScript, the Godot game engine’s proprietary language.
 
 All of these bits are put together in the `graph_annealing.gd` file in the Dollar Shuffle repo.  Because the game is open source you're free to take this code and play with it yourself!  
 
