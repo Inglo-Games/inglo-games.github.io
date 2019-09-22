@@ -25,7 +25,7 @@ The [Wikipedia page for Graph Drawing][https://en.wikipedia.org/wiki/Graph_drawi
 * Nodes too close to border of screen
 With these well defined measures, we can create a cost function: a mathematical formula used to "grade" a current setup.  This function is used to optimize the graph.  To maximize the good-looking-ness of the graph, we minimize the output of this function.  Below is an example cost function only implementing the last 3 measures listed above:
 
-```
+{% highlight python %}
 # Total cost of graph -- This could have been one int, but separating them
 # make debugging easier
 var costs = [0, 0, 0]
@@ -65,13 +65,15 @@ for node in graph.keys():
         costs[2] += L3 * edge_len
 
 return costs[0] + costs[1] + costs[2]
-```
+{% endhighlight %}
+
 The biggest stumbling block for optimization problems in general is local minima and maxima.  These are points that represent a best setup for a small range of possible setups, but not the best overall.  For instance, if our optimization problem was finding the lowest point in a curve, a local minimum would be the bottom of a small valley that still sits above a lower valley.  For our situation, these are layouts that seem like the best solution, but even better ones exist if we could make some adjustments that might make the graph worse in the interim.  Not getting stuck in local minima is key to getting an optimized graph, so let's explore one optimization technique that avoids them.
 
 ## Simulated Annealing
 
 Simulated annealing is a process where a setup -- the layout of the graph's nodes in our case -- is randomly tweaked and compared to the previous setup using the cost function.  If it's better, we keep the new setup.  Otherwise, we select which one to keep randomly, with the probability of keeping the old one proportional to how much better it is.  This small element of randomness helps to avoid local minima.  Repeat this a few thousand times and, eventually, a significantly better setup is found.  It’s a process not unlike natural selection: a change is made and, if it’s better, it outlives its predecessor.  By performing simulated annealing on our graph we can produce a layout that minimizes the quality measures listed above.
-```
+
+{% highlight python %}
 # Define a starting "temperature", which limits how far nodes can move 
 var temp = 0.85
 
@@ -90,9 +92,11 @@ for index in range(TRIALS):
     if randf() < prob:
         graph = graph_new
         cost_current = cost_new
-```
+{% endhighlight %}
+
 The key part of this algorithm is hidden in the phrase "randomly tweaked".  At first, these random changes can be large.  For instance, it could move a node a few hundred pixels in any direction.  As the algorithm progresses the changes become more constrained.  By the end of the algorithm it might be moving nodes 10 or 15 pixels.  The reason for this -- and the reason simulated annealing is an effective optimization technique -- is that it allows the setup to break out of local minima and maxima early on in the process.
-```
+
+{% highlight python %}
 # For the predefined number of trials...
 for index in range(TRIALS):
 
@@ -100,9 +104,11 @@ for index in range(TRIALS):
 
 # Reduce temperature at a predefined rate
 temp *= D_TEMP
-```
+{% endhighlight %}
+
 The final part of the puzzle (so to speak) is when to *stop* the annealing.  A set number might lead to suboptimal graphs, or it could lead to wasting processor time on an already good graph.  A better heuristic is keeping track of how many times in a row it doesn't find a better layout.  If this number gets too big, then the graph we have must be pretty good, so we can just break out.  While this may mean not getting perfect graphs, that’s alright.  As long as the produced layouts aren’t bad or confusing, that’s enough.  We wouldn’t want players to wait for several minutes while the game generates each level!
-```
+
+{% highlight python %}
 # Start by randomly distributing all nodes
 for node in graph.keys():
     graph[node]["loc"] = Vector2(randf(), randf())
@@ -142,9 +148,11 @@ while temp > LIM_TEMP:
     
     # Reduce temperature at a predefined rate
     temp *= D_TEMP
-```
+{% endhighlight %}
+
 After the annealing process I also added a “fine tuning” step that added one additional quality measure.  In this phase the cost function also considered how close any given node was to the edges.  This was to make sure that the graphs being produced didn’t have nodes sitting on top of edges they weren't connected to.  This would have been confusing at best, and game-breaking at worst.
-```
+
+{% highlight python %}
 # Once main processing is done, do fine tuning
 # Re-calculate cost of graph, now with edge-distance cost
 cost_current = cost(graph, true)
@@ -158,7 +166,8 @@ for index in range(FINE_TUNING_LOOPS):
     if cost_new < cost_current:
         graph = graph_new
         cost_current = cost_new
-```
+{% endhighlight %}
+
 I'm certainly not the first one to apply simulated annealing to graph drawing.  In fact, almost all of my code was adapted from a [research paper][https://dl.acm.org/citation.cfm?id=234538] by Davidson and Harel.  It turns out, simulated annealing has been used to make nice looking graphs on computers almost as long as graphs have been displayed on computers.  All that was left for me to do was adapt that code into GDScript, the Godot game engine’s proprietary language.
 
 All of these bits are put together in the `graph_annealing.gd` file in the Dollar Shuffle repo.  Because the game is open source you're free to take this code and play with it yourself!  
