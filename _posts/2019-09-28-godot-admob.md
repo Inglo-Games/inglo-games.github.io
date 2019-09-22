@@ -15,6 +15,8 @@ Once the account is created, you’ll have to set up an application and an add a
 
 Once your ad is ready to add you’ll see 2 ID numbers that you need to be added to your app.  The first is an app-wide ID that will be added to the Android export template in the next step.  The second is an ad-specific ID that will be added to the app’s code in step 3.
 
+![Screenshot of AdMob page after creating new ad](/assets/posts_admob/AdMobExample.png)
+
 ## Step 2: Building the Android Template
 
 While there are pre-made Android templates with the AdMob module enabled, these do not have your app-wide AdMob ID in the Android manifest file.  In order to build an app with your ID in place, you’ll have to rebuild the whole thing.  Since it’s an app-wide ID, you will have to build a new template APK for each app you want to publish.
@@ -100,3 +102,5 @@ Notice that all changes to the ads occur inside and `if Ads.admob != null` check
 ## Step 4: Exporting the Game
 
 Once your game is ready to export, you’ll have to make sure you set up Godot to use the Android templates you created in step 2. In the export menu, select Android.  In the `Custom Package` section, change both the `Debug` and `Release` files to the APKs in the `godot/bin` directory.  Then export your project as usual.
+
+![Screenshot of Godot's export dialog](/assets/posts_admob/ExportTemplates.png)
