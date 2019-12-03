@@ -19,5 +19,12 @@
 		"url": "https://merly23.itch.io/asphodel-meadows",
 		"date": "September 2019",
 		"tags": ["Linux","Windows"]
+	},
+	{
+		"name": "Evac Havoc 2",
+		"image": "evac_icon.png",
+		"url": "https://inglo-games.itch.io/evac-havoc-2",
+		"date": "November 2019",
+		"tags": ["Web","Linux","Windows","OSX"]
 	}
 ]
