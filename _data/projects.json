@@ -26,5 +26,12 @@
 		"url": "https://inglo-games.itch.io/evac-havoc-2",
 		"date": "November 2019",
 		"tags": ["Web","Linux","Windows","OSX"]
+	},
+	{
+		"name": "Lifetoll",
+		"image": "lifetoll_icon.jpg",
+		"url": "https://inglo-games.itch.io/lifetoll",
+		"date": "December 2019",
+		"tags": ["Linux","Windows","OSX"]
 	}
 ]
