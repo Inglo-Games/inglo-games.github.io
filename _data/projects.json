@@ -33,5 +33,12 @@
 		"url": "https://inglo-games.itch.io/lifetoll",
 		"date": "December 2019",
 		"tags": ["Linux","Windows","OSX"]
+	},
+	{
+		"name": "The Incredible Pirate Race",
+		"image": "pirate_icon.jpg",
+		"url": "https://inglo-games.itch.io/the-incredible-pirate-race",
+		"date": "March 2020",
+		"tags": ["Web", "Linux","Windows","OSX"]
 	}
 ]
