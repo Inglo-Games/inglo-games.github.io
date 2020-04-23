@@ -26,6 +26,7 @@ The [Wikipedia page for Graph Drawing](https://en.wikipedia.org/wiki/Graph_drawi
 * Deviation in edge length
 * Deviation in distance between nodes
 * Nodes too close to border of screen
+
 With these well defined measures, we can create a cost function: a mathematical formula used to "grade" a current setup.  This function is used to optimize the graph.  To maximize the good-looking-ness of the graph, we minimize the output of this function.  Below is an example cost function only implementing the last 3 measures listed above:
 
 {% highlight python %}

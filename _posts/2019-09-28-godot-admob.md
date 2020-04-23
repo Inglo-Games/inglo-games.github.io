@@ -40,7 +40,7 @@ Copy the AdMob module from it’s repo into the `modules` directory of the Godot
 cp -r ../android-admob/admob modules/
 {% endhighlight %}
 
-Now build the actual template using the SCons build system that comes with Godot.  If you haven’t installed it already, look up how to do that in the [Godot documentation][http://docs.godotengine.org/en/latest/development/compiling/introduction_to_the_buildsystem.html].  Execute the following commands to build libraries for armv7 and arm64v8 devices.
+Now build the actual template using the SCons build system that comes with Godot.  If you haven’t installed it already, look up how to do that in the [Godot documentation](http://docs.godotengine.org/en/latest/development/compiling/introduction_to_the_buildsystem.html).  Execute the following commands to build libraries for armv7 and arm64v8 devices.
 
 {% highlight bash %}
 scons platform=android android_arch=armv7 target=release
@@ -67,7 +67,7 @@ If everything worked correctly, there will be two APK files in the `godot/bin` d
 
 ## Step 3: Putting an Ad In Your Game
 
-The AdMob module has a pretty comprehensive [API in their readme][https://github.com/kloder-games/godot-admob#api-reference-android--ios], so I won’t go over the whole thing.  The important bits you’ll have to add are these.  First, in a global script that’s autoloaded by your game, put the code that sets up the AdMob object and the ad you’re loading:
+The AdMob module has a pretty comprehensive [API in their readme](https://github.com/kloder-games/godot-admob#api-reference-android--ios), so I won’t go over the whole thing.  The important bits you’ll have to add are these.  First, in a global script that’s autoloaded by your game, put the code that sets up the AdMob object and the ad you’re loading:
 
 {% highlight python %}
 # Admob variables -- replace ID with your own
