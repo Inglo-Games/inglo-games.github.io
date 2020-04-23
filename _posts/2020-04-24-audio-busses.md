@@ -34,6 +34,12 @@ There are 3 main things you can do to tweak a bus from this view.  First, you ca
 
 ![Adding effects to a bus](/assets/posts_audio/custom_bus_effect.png)
 
+Once your bus is set up, you can set what bus each `AudioStreamPlayer` goes to in that node's `Inspector` panel:
+
+![Setting the bus in an AudioStreamPlayer](/assets/posts_audio/audio_player_inspector.png)
+
+It's important to note that you should still use the `Volume Db` property for each `AudioStreamPlayer` to ensure that all sounds going to the same bus sound correct relative to one another.  Having control over the busses doesn't do any good if one bus is dominated by a single sound!
+
 ## How Can Busses Be Manipulated in Code?
 
 Setting up audio busses inside your project is nice and makes tweaking audio much easier later on.  However, the real power of audio busses comes from changing them while your game is running.  To accomplish this, Godot has an `AudioServer` singleton that contains all the functions needed to manipulate the audio.  For example, the `set_bus_volume_db` function adjusts the volume level of a given bus.  Here is an example of this function in action, taken from a jam game I made, where these functions are connected to sliders in the options menu:
