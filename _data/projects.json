@@ -40,5 +40,12 @@
 		"url": "https://inglo-games.itch.io/the-incredible-pirate-race",
 		"date": "March 2020",
 		"tags": ["Web", "Linux","Windows","OSX"]
+	},
+	{
+		"name": "The Dreamland Revolution",
+		"image": "revolution_icon.png",
+		"url": "https://inglo-games.itch.io/dreamland-revolution",
+		"date": "June 2020",
+		"tags": ["Web", "Linux", "Windows", "OSX"]
 	}
 ]
