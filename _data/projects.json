@@ -21,13 +21,6 @@
 		"tags": ["Linux","Windows"]
 	},
 	{
-		"name": "Evac Havoc 2",
-		"image": "evac_icon.png",
-		"url": "https://inglo-games.itch.io/evac-havoc-2",
-		"date": "November 2019",
-		"tags": ["Web","Linux","Windows","OSX"]
-	},
-	{
 		"name": "Lifetoll",
 		"image": "lifetoll_icon.jpg",
 		"url": "https://inglo-games.itch.io/lifetoll",
@@ -47,5 +40,12 @@
 		"url": "https://inglo-games.itch.io/dreamland-revolution",
 		"date": "June 2020",
 		"tags": ["Web", "Linux", "Windows", "OSX"]
+	},
+	{
+		"name": "Sigma Dice",
+		"image": "sigma_icon.png",
+		"url": "https://play.google.com/store/apps/details?id=com.inglogames.sigmadice",
+		"date": "February 2025",
+		"tags": ["Android"]
 	}
 ]
