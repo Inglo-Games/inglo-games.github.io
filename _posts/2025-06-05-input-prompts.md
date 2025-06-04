@@ -147,6 +147,8 @@ func _on_body_entered(body: Node3D):
 	body.input_prompt_finished.connect($ControlUI.clear_text)
 
 func _on_body_exited(body: Node3D):
+	body.input_prompt_triggered.disconnect($ControlUI.set_text)
+	body.input_prompt_finished.disconnect($ControlUI.clear_text)
 	$ControlUI.clear_text()
 {% endhighlight %}
 

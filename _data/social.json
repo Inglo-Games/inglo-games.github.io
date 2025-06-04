@@ -1,18 +1,14 @@
 [
   {
-    "icon": "fa-facebook",
-    "link": ""
+    "icon": "fa-users",
+    "link": "https://mastodon.gamedev.place/@IngloGamesDev"
   },
   {
-    "icon": "fa-twitter",
-    "link": ""
+    "icon": "fa-gamepad",
+    "link": "https://inglo-games.itch.io/"
   },
   {
-    "icon": "fa-linkedin",
-    "link": ""
-  },
-  {
-    "icon": "fa-stack-exchange",
-    "link": ""
+    "icon": "fa-android",
+    "link": "https://play.google.com/store/apps/developer?id=Inglo+Games"
   }
 ]
